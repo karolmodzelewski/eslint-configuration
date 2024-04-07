@@ -179,7 +179,8 @@
             "error",
             {
                 "vars": "all",
-                "args": "after-used"
+                "args": "after-used",
+                "ignoreRestSiblings": true
             }
         ],
         "import/named": "error",
