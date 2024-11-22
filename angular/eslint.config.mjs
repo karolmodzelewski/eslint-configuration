@@ -110,6 +110,17 @@ export default [
             '@typescript-eslint/prefer-optional-chain': 'error',
             '@typescript-eslint/no-redundant-type-constituents': 'error',
             '@typescript-eslint/no-useless-constructor': 'error',
+            '@typescript-eslint/no-explicit-any': 'error',
+            '@typescript-eslint/no-wrapper-object-types': 'error',
+            '@typescript-eslint/prefer-enum-initializers': 'error',
+            '@typescript-eslint/prefer-readonly': 'error',
+            '@typescript-eslint/switch-exhaustiveness-check': [
+                'error',
+                {
+                    allowDefaultCaseForExhaustiveSwitch: true,
+                    considerDefaultExhaustiveForUnions: true,
+                }
+            ],
             '@typescript-eslint/restrict-template-expressions': [
                 'error',
                 {
