@@ -6,6 +6,7 @@ import js from '@eslint/js';
 import angularEslint from '@angular-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import typescriptEslint from '@typescript-eslint/eslint-plugin';
+import templateParser from '@angular-eslint/template-parser';
 import unusedImports from 'eslint-plugin-unused-imports';
 import _import from 'eslint-plugin-import';
 import path from 'node:path';
@@ -352,6 +353,27 @@ export default [
             },
           ],
           pathGroupsExcludedImportTypes: ['builtin', 'type', 'object'],
+        },
+      ],
+    },
+  },
+  {
+    files: ['**/*.html'],
+    languageOptions: {
+      parser: templateParser,
+    },
+    rules: {
+      '@angular-eslint/template/attributes-order': [
+        'error',
+        {
+          order: [
+            'TEMPLATE_REFERENCE',
+            'STRUCTURAL_DIRECTIVE',
+            'OUTPUT_BINDING',
+            'TWO_WAY_BINDING',
+            'INPUT_BINDING',
+            'ATTRIBUTE_BINDING',
+          ],
         },
       ],
     },
