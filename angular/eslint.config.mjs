@@ -210,16 +210,8 @@ export default [
             'private-decorated-get',
             /* Decorated getters (end) */
 
-            'public-instance-field',
-            'protected-instance-field',
-            'private-instance-field',
-
             'public-abstract-field',
             'protected-abstract-field',
-
-            'public-field',
-            'protected-field',
-            'private-field',
 
             // Setters
             'public-static-set',
