@@ -111,7 +111,6 @@ export default [
       '@typescript-eslint/no-unsafe-argument': 'error',
       '@typescript-eslint/only-throw-error': 'error',
       '@typescript-eslint/prefer-promise-reject-errors': 'error',
-      '@typescript-eslint/no-confusing-void-expression': 'error',
       '@typescript-eslint/no-unnecessary-template-expression': 'error',
       '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
       '@typescript-eslint/no-unnecessary-type-conversion': 'error',
@@ -130,6 +129,12 @@ export default [
       '@typescript-eslint/method-signature-style': 'error',
       '@typescript-eslint/no-unused-private-class-members': 'error',
       '@typescript-eslint/prefer-for-of': 'error',
+      '@typescript-eslint/no-confusing-void-expression': [
+        'error',
+        {
+          ignoreArrowShorthand: true,
+        },
+      ],
       '@typescript-eslint/switch-exhaustiveness-check': [
         'error',
         {
