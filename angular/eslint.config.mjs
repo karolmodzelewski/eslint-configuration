@@ -116,6 +116,10 @@ export default [
           style: 'camelCase',
         },
       ],
+      '@angular-eslint/prefer-on-push-component-change-detection': [
+        'error',
+        { allowExplicitOnPush: false },
+      ],
       '@angular-eslint/inject-at-top': 'error',
       '@angular-eslint/prefer-standalone': 'error',
       '@angular-eslint/prefer-inject': 'error',
@@ -123,7 +127,6 @@ export default [
       '@angular-eslint/prefer-signal-model': 'error',
       '@angular-eslint/prefer-output-emitter-ref': 'error',
       '@angular-eslint/prefer-output-readonly': 'error',
-      '@angular-eslint/prefer-on-push-component-change-detection': 'error',
       '@angular-eslint/no-uncalled-signals': 'error',
       '@angular-eslint/computed-must-return': 'error',
       '@angular-eslint/no-async-lifecycle-method': 'error',
