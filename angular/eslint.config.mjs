@@ -12,6 +12,7 @@ import templateParser from '@angular-eslint/template-parser';
 import stylistic from '@stylistic/eslint-plugin';
 import unusedImports from 'eslint-plugin-unused-imports';
 import _import from 'eslint-plugin-import';
+import playwright from 'eslint-plugin-playwright';
 import path from 'node:path';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -31,6 +32,9 @@ export default [
       '**/.angular/**',
       '**/coverage/**',
       '**/storybook-static/**',
+      '**/playwright-report/**',
+      '**/test-results/**',
+      '**/blob-report/**',
     ],
   },
   ...fixupConfigRules(
@@ -482,6 +486,10 @@ export default [
         },
       ],
     },
+  },
+  {
+    ...playwright.configs['flat/recommended'],
+    files: ['e2e/**/*.ts'],
   },
   {
     files: ['**/*.html'],

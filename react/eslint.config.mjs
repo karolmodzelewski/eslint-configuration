@@ -13,6 +13,7 @@ import stylistic from '@stylistic/eslint-plugin';
 import unusedImports from 'eslint-plugin-unused-imports';
 import _import from 'eslint-plugin-import';
 import globals from 'globals';
+import playwright from 'eslint-plugin-playwright';
 import path from 'node:path';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -31,6 +32,9 @@ export default [
       '**/build/**',
       '**/coverage/**',
       '**/storybook-static/**',
+      '**/playwright-report/**',
+      '**/test-results/**',
+      '**/blob-report/**',
     ],
   },
   ...fixupConfigRules(
@@ -453,6 +457,14 @@ export default [
           pathGroupsExcludedImportTypes: ['builtin', 'type', 'object'],
         },
       ],
+    },
+  },
+  {
+    ...playwright.configs['flat/recommended'],
+    files: ['e2e/**/*.ts'],
+    rules: {
+      ...playwright.configs['flat/recommended'].rules,
+      'react-hooks/rules-of-hooks': 'off',
     },
   },
 ];
