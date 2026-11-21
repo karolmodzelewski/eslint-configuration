@@ -361,16 +361,6 @@ export default [
             'external',
             ['parent', 'sibling', 'index'],
           ],
-          pathGroups: [
-            {
-              pattern: 'rxjs',
-              group: 'unknown',
-            },
-            {
-              pattern: 'rxjs/**',
-              group: 'unknown',
-            },
-          ],
           pathGroupsExcludedImportTypes: ['builtin', 'type', 'object'],
         },
       ],

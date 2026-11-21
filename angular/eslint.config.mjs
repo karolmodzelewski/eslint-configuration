@@ -477,10 +477,6 @@ export default [
               pattern: 'rxjs/**',
               group: 'unknown',
             },
-            {
-              pattern: '@drl/**',
-              group: 'builtin',
-            },
           ],
           pathGroupsExcludedImportTypes: ['builtin', 'type', 'object'],
         },
